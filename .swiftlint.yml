@@ -1,0 +1,11 @@
+#
+# .swiftlint.yml
+# mst
+#
+# https://github.com/realm/SwiftLint#configuration
+#
+---
+excluded:
+- Carthage
+- .build
+

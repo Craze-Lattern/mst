@@ -1,0 +1,4 @@
+github "Carthage/Commandant" "0.17.0"
+github "JohnSundell/Files" "3.1.0"
+github "onevcat/Rainbow" "3.1.5"
+github "thoughtbot/Curry" "v4.0.2"

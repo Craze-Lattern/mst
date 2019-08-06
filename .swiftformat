@@ -1,0 +1,8 @@
+#
+# .swiftformat
+# mst
+#
+# https://github.com/nicklockwood/SwiftFormat#config-file
+#
+
+--exclude Carthage,.build,Package.swift

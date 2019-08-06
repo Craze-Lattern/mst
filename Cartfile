@@ -1,0 +1,4 @@
+github "Carthage/Commandant"
+github "onevcat/Rainbow"
+github "JohnSundell/Files"
+github "thoughtbot/Curry"
