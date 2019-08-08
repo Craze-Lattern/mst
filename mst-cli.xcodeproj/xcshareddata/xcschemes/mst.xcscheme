@@ -52,11 +52,27 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "help"
+            argument = "unused"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "analyze"
+            argument = "/Users/guoyuan/zuoyebang/homework-iOS-V3"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--exclude"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "Build|DerivedData|Pods"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--output"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "/Users/guoyuan/Personal/unused.html"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

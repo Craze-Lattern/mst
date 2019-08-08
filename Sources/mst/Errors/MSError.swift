@@ -9,18 +9,15 @@
 import Commandant
 
 public enum MSError: Error, Equatable, CustomStringConvertible {
-    case fileNotFound(String)
-    case notFile(String)
+    case noneFileFound
     case error(String)
 
     public var description: String {
         switch self {
-        case let .fileNotFound(path):
-            return "\(path) not found"
-        case let .notFile(path):
-            return "\(path) not a file"
         case let .error(error):
             return error
+        case .noneFileFound:
+            return "Found none of file"
         }
     }
 }

@@ -12,6 +12,12 @@
 		B229ECA222F9635B00DD35B0 /* Rainbow.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = B229EC9C22F9634500DD35B0 /* Rainbow.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B229ECA422F9637400DD35B0 /* Files.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = B229EC9B22F9634500DD35B0 /* Files.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B229ECA522F9637400DD35B0 /* Rainbow.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = B229EC9C22F9634500DD35B0 /* Rainbow.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B229ECA922FA76AC00DD35B0 /* Unused.swift in Sources */ = {isa = PBXBuildFile; fileRef = B229ECA822FA76AC00DD35B0 /* Unused.swift */; };
+		B229ECB022FAC0A400DD35B0 /* FileSearchRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B229ECAF22FAC0A400DD35B0 /* FileSearchRule.swift */; };
+		B229ECB222FAC79500DD35B0 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = B229ECB122FAC79500DD35B0 /* File.swift */; };
+		B229ECB422FAD3DE00DD35B0 /* ProcessExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B229ECB322FAD3DE00DD35B0 /* ProcessExtension.swift */; };
+		B229ECB522FAD58C00DD35B0 /* Files.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B229EC9B22F9634500DD35B0 /* Files.framework */; };
+		B229ECB622FAD58C00DD35B0 /* Files.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = B229EC9B22F9634500DD35B0 /* Files.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B2933A4622F92A9D0003F3A9 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2933A4122F92A9D0003F3A9 /* Version.swift */; };
 		B2933A4722F92A9D0003F3A9 /* Analyze.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2933A4222F92A9D0003F3A9 /* Analyze.swift */; };
 		B2933A4822F92A9D0003F3A9 /* MSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2933A4422F92A9D0003F3A9 /* MSError.swift */; };
@@ -43,6 +49,7 @@
 			files = (
 				B229ECA022F9635B00DD35B0 /* Commandant.framework in Copy Frameworks */,
 				B229ECA122F9635B00DD35B0 /* Curry.framework in Copy Frameworks */,
+				B229ECB622FAD58C00DD35B0 /* Files.framework in Copy Frameworks */,
 				B229ECA222F9635B00DD35B0 /* Rainbow.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
@@ -80,6 +87,10 @@
 		B229EC9E22F9634500DD35B0 /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = Carthage/Build/Mac/Curry.framework; sourceTree = "<group>"; };
 		B229ECA622F966BB00DD35B0 /* .swift-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
 		B229ECA722F96A4000DD35B0 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		B229ECA822FA76AC00DD35B0 /* Unused.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unused.swift; sourceTree = "<group>"; };
+		B229ECAF22FAC0A400DD35B0 /* FileSearchRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSearchRule.swift; sourceTree = "<group>"; };
+		B229ECB122FAC79500DD35B0 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		B229ECB322FAD3DE00DD35B0 /* ProcessExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessExtension.swift; sourceTree = "<group>"; };
 		B2933A3222F92A650003F3A9 /* mst */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mst; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2933A3F22F92A9D0003F3A9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2933A4122F92A9D0003F3A9 /* Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
@@ -109,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B229ECB522FAD58C00DD35B0 /* Files.framework in Frameworks */,
 				B2933A9422F92C610003F3A9 /* MstKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -132,6 +144,15 @@
 				B229EC9C22F9634500DD35B0 /* Rainbow.framework */,
 			);
 			name = Carthage;
+			sourceTree = "<group>";
+		};
+		B229ECAA22FA7EF600DD35B0 /* Unused */ = {
+			isa = PBXGroup;
+			children = (
+				B229ECB122FAC79500DD35B0 /* File.swift */,
+				B229ECAF22FAC0A400DD35B0 /* FileSearchRule.swift */,
+			);
+			path = Unused;
 			sourceTree = "<group>";
 		};
 		B2933A2922F92A650003F3A9 = {
@@ -187,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				B2933A4222F92A9D0003F3A9 /* Analyze.swift */,
+				B229ECA822FA76AC00DD35B0 /* Unused.swift */,
 				B2933A4122F92A9D0003F3A9 /* Version.swift */,
 			);
 			path = Commands;
@@ -203,10 +225,11 @@
 		B2933A6622F92ACB0003F3A9 /* MstKit */ = {
 			isa = PBXGroup;
 			children = (
+				B2933A6E22F92ACB0003F3A9 /* Analyze */,
 				B2933A6922F92ACB0003F3A9 /* Extensions */,
-				B2933A6E22F92ACB0003F3A9 /* LinkMap */,
 				B2933A9822F92C9E0003F3A9 /* Models */,
 				B2933A6C22F92ACB0003F3A9 /* Supporting Files */,
+				B229ECAA22FA7EF600DD35B0 /* Unused */,
 			);
 			name = MstKit;
 			path = Sources/MstKit;
@@ -215,6 +238,7 @@
 		B2933A6922F92ACB0003F3A9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B229ECB322FAD3DE00DD35B0 /* ProcessExtension.swift */,
 				B2933A6A22F92ACB0003F3A9 /* Regex.swift */,
 				B2933A6B22F92ACB0003F3A9 /* StringExtension.swift */,
 			);
@@ -229,13 +253,13 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		B2933A6E22F92ACB0003F3A9 /* LinkMap */ = {
+		B2933A6E22F92ACB0003F3A9 /* Analyze */ = {
 			isa = PBXGroup;
 			children = (
 				B2933A7022F92ACB0003F3A9 /* LinkMap.swift */,
 				B2933A6F22F92ACB0003F3A9 /* Template.swift */,
 			);
-			path = LinkMap;
+			path = Analyze;
 			sourceTree = "<group>";
 		};
 		B2933A7722F92B460003F3A9 /* Frameworks */ = {
@@ -248,14 +272,14 @@
 		B2933A8822F92B660003F3A9 /* Projects */ = {
 			isa = PBXGroup;
 			children = (
-				B229ECA722F96A4000DD35B0 /* .gitignore */,
 				B2933A8E22F92B890003F3A9 /* Brewfile */,
 				B2933A8C22F92B890003F3A9 /* Cartfile */,
 				B2933A8F22F92B890003F3A9 /* Carthage */,
 				B2933A8B22F92B890003F3A9 /* Makefile */,
 				B2933A9122F92B890003F3A9 /* script */,
-				B229EC9822F962F100DD35B0 /* .swiftformat */,
+				B229ECA722F96A4000DD35B0 /* .gitignore */,
 				B229ECA622F966BB00DD35B0 /* .swift-version */,
+				B229EC9822F962F100DD35B0 /* .swiftformat */,
 				B229EC9922F962F100DD35B0 /* .swiftlint.yml */,
 				B2933A8922F92B890003F3A9 /* Cartfile.resolved */,
 				B2933A9322F92C210003F3A9 /* Package.resolved */,
@@ -420,6 +444,7 @@
 				B2933A4722F92A9D0003F3A9 /* Analyze.swift in Sources */,
 				B2933A4922F92A9D0003F3A9 /* main.swift in Sources */,
 				B2933A4822F92A9D0003F3A9 /* MSError.swift in Sources */,
+				B229ECA922FA76AC00DD35B0 /* Unused.swift in Sources */,
 				B2933A4622F92A9D0003F3A9 /* Version.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,7 +453,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B229ECB222FAC79500DD35B0 /* File.swift in Sources */,
+				B229ECB022FAC0A400DD35B0 /* FileSearchRule.swift in Sources */,
 				B2933A7622F92ACB0003F3A9 /* LinkMap.swift in Sources */,
+				B229ECB422FAD3DE00DD35B0 /* ProcessExtension.swift in Sources */,
 				B2933A7222F92ACB0003F3A9 /* Regex.swift in Sources */,
 				B2933A7322F92ACB0003F3A9 /* StringExtension.swift in Sources */,
 				B2933A7522F92ACB0003F3A9 /* Template.swift in Sources */,
@@ -491,6 +519,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -546,6 +575,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -611,6 +641,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "Sources/MstKit/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -642,6 +673,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "Sources/MstKit/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (

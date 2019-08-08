@@ -20,6 +20,7 @@ public struct StderrOutputStream: TextOutputStream {
 let registry = CommandRegistry<MSError>()
 
 registry.register(AnalyzeCommand())
+registry.register(UnusedCommand())
 registry.register(VersionCommand())
 
 let helpCommand = HelpCommand(registry: registry)

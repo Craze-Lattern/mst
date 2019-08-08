@@ -33,13 +33,13 @@ public struct AnalyzeCommand: CommandProtocol {
 
     public func run(_ options: AnalyzeCommand.Options) -> Result<Void, MSError> {
         do {
-            let outpus = try analyze(options.path, aPath: options.previousPath, combinModules: options.combinModules)
+            let outputs = try analyze(options.path, aPath: options.previousPath, combinModules: options.combinModules)
 
-            try LinkMap.output(
+            try output(
                 .init(options.outputPath),
-                headers: outpus.header,
-                bodys: outpus.body,
-                footers: outpus.footer
+                headers: outputs.header,
+                bodys: outputs.body,
+                footers: outputs.footer
             )
         } catch {
             if let error = error as? MSError {

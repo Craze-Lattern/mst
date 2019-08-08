@@ -25,7 +25,7 @@ MSTKIT_PLIST=Sources/MstKit/Supporting Files/Info.plist
 
 VERSION_STRING=$(shell /usr/libexec/PlistBuddy -c "Print :CFBundleShortVersionString" "$(MST_PLIST)")
 
-.PHONY: all bootstrap hooks clean build install package uninstall xcodeproj sort
+.PHONY: all bootstrap hooks clean build install package uninstall xcodeproj sort release
 
 all: build
 
@@ -88,19 +88,18 @@ sort:
 get_version:
 	@echo $(VERSION_STRING)
 
-push_version:
+release:
 ifneq ($(strip $(shell git status --untracked-files=no --porcelain 2>/dev/null)),)
 	$(error git state is not clean)
 endif
 	$(eval NEW_VERSION_AND_NAME := $(filter-out $@,$(MAKECMDGOALS)))
 	$(eval NEW_VERSION := $(shell echo $(NEW_VERSION_AND_NAME) | sed 's/:.*//' ))
 	@sed 's/__VERSION__/$(NEW_VERSION)/g' script/Version.swift.template > Sources/MstKit/Models/Version.swift
-	@/usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString $(NEW_VERSION)" "$(MSTKIT_PLIST)"
-	@/usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString $(NEW_VERSION)" "$(MST_PLIST)"
-	git commit -a -m "release $(NEW_VERSION)"
+	@/usr/bin/agvtool new-marketing-version "$(NEW_VERSION)"
+	@/usr/bin/agvtool next-version -all
+	git commit -a -m "Release $(NEW_VERSION)"
 	git tag -a $(NEW_VERSION) -m "$(NEW_VERSION_AND_NAME)"
 	git push origin master
-	git push origin $(NEW_VERSION)
 
 %:
 	@:
