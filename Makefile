@@ -100,6 +100,7 @@ endif
 	git commit -a -m "Release $(NEW_VERSION)"
 	git tag -a $(NEW_VERSION) -m "$(NEW_VERSION_AND_NAME)"
 	git push origin master
+	git push origin $(NEW_VERSION)
 
 %:
 	@:
