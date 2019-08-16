@@ -28,6 +28,9 @@
 		B2933A7622F92ACB0003F3A9 /* LinkMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2933A7022F92ACB0003F3A9 /* LinkMap.swift */; };
 		B2933A9422F92C610003F3A9 /* MstKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2933A4F22F92AB70003F3A9 /* MstKit.framework */; };
 		B2933A9A22F92CB30003F3A9 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2933A9922F92CB30003F3A9 /* Version.swift */; };
+		B2FA4EE82305086500E8EBA3 /* Useless.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FA4EE72305086500E8EBA3 /* Useless.swift */; };
+		B2FA51E723054A3100E8EBA3 /* MachO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FA51E623054A3100E8EBA3 /* MachO.swift */; };
+		B2FA54E523056B4900E8EBA3 /* SystemFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FA54E423056B4900E8EBA3 /* SystemFunctions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +116,9 @@
 		B2933A9222F92BC30003F3A9 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		B2933A9322F92C210003F3A9 /* Package.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Package.resolved; sourceTree = "<group>"; };
 		B2933A9922F92CB30003F3A9 /* Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
+		B2FA4EE72305086500E8EBA3 /* Useless.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Useless.swift; sourceTree = "<group>"; };
+		B2FA51E623054A3100E8EBA3 /* MachO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachO.swift; sourceTree = "<group>"; };
+		B2FA54E423056B4900E8EBA3 /* SystemFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemFunctions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +215,7 @@
 			children = (
 				B2933A4222F92A9D0003F3A9 /* Analyze.swift */,
 				B229ECA822FA76AC00DD35B0 /* Unused.swift */,
+				B2FA4EE72305086500E8EBA3 /* Useless.swift */,
 				B2933A4122F92A9D0003F3A9 /* Version.swift */,
 			);
 			path = Commands;
@@ -227,6 +234,7 @@
 			children = (
 				B2933A6E22F92ACB0003F3A9 /* Analyze */,
 				B2933A6922F92ACB0003F3A9 /* Extensions */,
+				B2FA4EE923050CEB00E8EBA3 /* Mach-O */,
 				B2933A9822F92C9E0003F3A9 /* Models */,
 				B2933A6C22F92ACB0003F3A9 /* Supporting Files */,
 				B229ECAA22FA7EF600DD35B0 /* Unused */,
@@ -257,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				B2933A7022F92ACB0003F3A9 /* LinkMap.swift */,
+				B2FA54E423056B4900E8EBA3 /* SystemFunctions.swift */,
 				B2933A6F22F92ACB0003F3A9 /* Template.swift */,
 			);
 			path = Analyze;
@@ -295,6 +304,14 @@
 				B2933A9922F92CB30003F3A9 /* Version.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B2FA4EE923050CEB00E8EBA3 /* Mach-O */ = {
+			isa = PBXGroup;
+			children = (
+				B2FA51E623054A3100E8EBA3 /* MachO.swift */,
+			);
+			path = "Mach-O";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -445,6 +462,7 @@
 				B2933A4922F92A9D0003F3A9 /* main.swift in Sources */,
 				B2933A4822F92A9D0003F3A9 /* MSError.swift in Sources */,
 				B229ECA922FA76AC00DD35B0 /* Unused.swift in Sources */,
+				B2FA4EE82305086500E8EBA3 /* Useless.swift in Sources */,
 				B2933A4622F92A9D0003F3A9 /* Version.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,9 +474,11 @@
 				B229ECB222FAC79500DD35B0 /* File.swift in Sources */,
 				B229ECB022FAC0A400DD35B0 /* FileSearchRule.swift in Sources */,
 				B2933A7622F92ACB0003F3A9 /* LinkMap.swift in Sources */,
+				B2FA51E723054A3100E8EBA3 /* MachO.swift in Sources */,
 				B229ECB422FAD3DE00DD35B0 /* ProcessExtension.swift in Sources */,
 				B2933A7222F92ACB0003F3A9 /* Regex.swift in Sources */,
 				B2933A7322F92ACB0003F3A9 /* StringExtension.swift in Sources */,
+				B2FA54E523056B4900E8EBA3 /* SystemFunctions.swift in Sources */,
 				B2933A7522F92ACB0003F3A9 /* Template.swift in Sources */,
 				B2933A9A22F92CB30003F3A9 /* Version.swift in Sources */,
 			);

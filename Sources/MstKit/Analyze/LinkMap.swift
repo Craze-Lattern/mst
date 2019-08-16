@@ -77,6 +77,21 @@ public struct LinkMap {
 
         return combineModules ? objects.combin() : objects
     }
+
+    func allFunctions() throws -> [(String, String)] {
+        let content = try file.readAsString(encoding: .macOSRoman)
+
+        let regex = try NSRegularExpression(pattern: "[+|-]\\[.+\\s(.+)\\]", options: .caseInsensitive)
+        print(ignoreSystemFunctions.sorted())
+        return Composition.symbols
+            .clip(content)
+            .flatMap { (line) -> [(String, String)] in
+                let matches = regex.matches(in: line, options: [], range: line.range)
+                return matches
+                    .map { (String(line[Range($0.range, in: line)!]), String(line[Range($0.range(at: 1), in: line)!])) }
+                    .filter { !ignoreSystemFunctions.contains($0.1) }
+            }
+    }
 }
 
 /// Analyze

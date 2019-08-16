@@ -8,17 +8,42 @@
 
 import Files
 import Foundation
+import Rainbow
 
 public extension Process {
     static func find(in path: String, extensions: [String], exclude: [String] = []) throws -> Set<FileSystem.Item> {
-        let process = Process()
-
-        process.launchPath = "/usr/bin/find"
-
-        process.arguments = [path, "-type", "f", "("]
+        let arguments = [path, "-type", "f", "("]
             + extensions.map { ["-o", "-name", "*.\($0)"] }.flatMap { $0 }.dropFirst()
             + [")"]
             + exclude.map { ["!", "-path", "*/\($0)/*"] }.flatMap { $0 }
+
+        guard let outputString = Process.launch("/usr/bin/find", arguments) else { return [] }
+
+        let result = try outputString
+            .components(separatedBy: "\n")
+            .dropLast()
+            .compactMap(generate)
+        return Set(result)
+    }
+
+    static func lipo(_ path: String) -> String? {
+        return Process.launch("/usr/bin/lipo", ["-info", path])
+    }
+
+    static func otool(arguments: [String]) -> String? {
+        return Process.launch("/usr/bin/otool", arguments)
+    }
+
+    static func file(_ path: String) -> String? {
+        return Process.launch("/usr/bin/file", ["-b", path])
+    }
+
+    private static func launch(_ command: String, _ arguments: [String]?) -> String? {
+        print("COMMAND: " + "\(command) \(arguments?.joined(separator: " ") ?? "")".lightCyan)
+        let process = Process()
+
+        process.launchPath = command
+        process.arguments = arguments
 
         let outPipe = Pipe()
         process.standardOutput = outPipe
@@ -27,13 +52,7 @@ public extension Process {
 
         let outdata = outPipe.fileHandleForReading.readDataToEndOfFile()
 
-        guard let outputString = String(data: outdata, encoding: .utf8) else { return [] }
-
-        let result = try outputString
-            .components(separatedBy: "\n")
-            .dropLast()
-            .compactMap(generate)
-        return Set(result)
+        return String(data: outdata, encoding: .utf8)
     }
 }
 

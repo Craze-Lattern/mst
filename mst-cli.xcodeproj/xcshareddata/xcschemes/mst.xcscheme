@@ -52,27 +52,27 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "unused"
+            argument = "help"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "useless"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "/Users/guoyuan/zuoyebang/homework-iOS-V3"
+            argument = "/Users/guoyuan/zuoyebang/homework"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "--exclude"
+            argument = "--useless-function"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "Build|DerivedData|Pods"
+            argument = "--link-map"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "--output"
-            isEnabled = "YES">
-         </CommandLineArgument>
-         <CommandLineArgument
-            argument = "/Users/guoyuan/Personal/unused.html"
+            argument = "/Users/guoyuan/zuoyebang/homework-LinkMap-normal-arm64-develop.txt"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

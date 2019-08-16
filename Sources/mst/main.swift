@@ -21,6 +21,7 @@ let registry = CommandRegistry<MSError>()
 
 registry.register(AnalyzeCommand())
 registry.register(UnusedCommand())
+registry.register(UselessCommand())
 registry.register(VersionCommand())
 
 let helpCommand = HelpCommand(registry: registry)
